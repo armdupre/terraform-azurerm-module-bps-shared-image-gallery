@@ -5,12 +5,12 @@ variable "AgentImageSku" {
 }
 
 variable "AgentStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Blade_9.30.117_KVM.vhd"
+	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.vhd"
 	type = string
 }
 
 variable "AgentStorageBlobSourceUri" {
-	default = "https://bpsve930.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Blade_9.30.117_KVM.vhd"
+	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Blade_10.00.vhd"
 	type = string
 }
 
@@ -21,12 +21,12 @@ variable "AppImageSku" {
 }
 
 variable "AppStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Controller_9.30.117_KVM.vhd"
+	default = "Ixia_BreakingPoint_Virtual_Controller_10.00.0_KVM.vhd"
 	type = string
 }
 
 variable "AppStorageBlobSourceUri" {
-	default = "https://bpsve930.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Controller_9.30.117_KVM.vhd"
+	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Controller_10.00.0_KVM.vhd"
 	type = string
 }
 
@@ -43,7 +43,7 @@ variable "ImagePublisherId" {
 }
 
 variable "ImageVersion" {
-	default = "9.30.2"
+	default = "10.0.0"
 	description = "The version number of an image SKU."
 	type = string
 }
@@ -117,7 +117,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "9.30.u2"
+	default = "10.0"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
