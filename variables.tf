@@ -10,7 +10,7 @@ variable "AgentStorageBlobName" {
 }
 
 variable "AgentStorageBlobSourceUri" {
-	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Blade_10.00.vhd"
+	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
 	type = string
 }
 
@@ -117,7 +117,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "10.0"
+	default = "10.00"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
