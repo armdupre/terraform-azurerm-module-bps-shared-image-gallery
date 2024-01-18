@@ -48,7 +48,7 @@ variable "ImageVersion" {
 	type = string
 }
 variable "InstanceId" {
-	default = "private"
+	default = "public"
 	description = "Id of the instance of this module that ensures uniqueness"
 	type = string
 }
