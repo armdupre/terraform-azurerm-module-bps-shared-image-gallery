@@ -5,7 +5,7 @@ variable "AgentImageSku" {
 }
 
 variable "AgentStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.vhd"
+	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
 	type = string
 }
 
