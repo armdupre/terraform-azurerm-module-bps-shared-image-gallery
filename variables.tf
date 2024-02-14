@@ -97,6 +97,12 @@ variable "StorageBlobType" {
 	type = string
 }
 
+variable "StorageContainerName" {
+	default = "bps-container"
+	description = "Id of container for properties, metadata, and blobs"
+	type = string
+}
+
 variable "Tag" {
 	default = "bps"
 	description = "App ID tag of application using the deployment"
