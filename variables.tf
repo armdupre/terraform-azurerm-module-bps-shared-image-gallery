@@ -4,13 +4,21 @@ variable "AgentImageSku" {
 	type = string
 }
 
-variable "AgentStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
+variable "AgentStorageAccountName" {
+	default = "bpsve1000"
+	description = "Id of Agent storage account that must be unique across Azure"
 	type = string
 }
 
-variable "AgentStorageBlobSourceUri" {
-	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
+variable "AgentStorageBlobName" {
+	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
+	description = "Id of Agent entity comprised of binary data, properties, and metadata"
+	type = string
+}
+
+variable "AgentStorageContainerName" {
+	default = "build"
+	description = "Id of Agent container for properties, metadata, and blobs"
 	type = string
 }
 
@@ -20,13 +28,21 @@ variable "AppImageSku" {
 	type = string
 }
 
-variable "AppStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Controller_10.00.0_KVM.vhd"
+variable "AppStorageAccountName" {
+	default = "bpsve1000"
+	description = "Id of App storage account that must be unique across Azure"
 	type = string
 }
 
-variable "AppStorageBlobSourceUri" {
-	default = "https://bpsve1000.blob.core.windows.net/bps-container/Ixia_BreakingPoint_Virtual_Controller_10.00.0_KVM.vhd"
+variable "AppStorageBlobName" {
+	default = "Ixia_BreakingPoint_Virtual_Controller_10.00.0.vhd"
+	description = "Id of App entity comprised of binary data, properties, and metadata"
+	type = string
+}
+
+variable "AppStorageContainerName" {
+	default = "build"
+	description = "Id of App container for properties, metadata, and blobs"
 	type = string
 }
 
@@ -71,16 +87,13 @@ variable "SharedImageGalleryName" {
 }
 
 variable "StorageAccountName" {
+	description = "Id of storage account that must be unique across Azure"
 	type = string
 }
 
 variable "StorageBlobType" {
 	default = "Page"
-	type = string
-}
-
-variable "StorageContainerName" {
-	default = "bps-container"
+	description = "Type of entity comprised of binary data, properties, and metadata"
 	type = string
 }
 

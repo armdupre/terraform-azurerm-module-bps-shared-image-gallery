@@ -1,12 +1,15 @@
 locals {
 	AgentImageName = trimsuffix(local.AgentStorageBlobName, ".vhd")
 	AgentImageSku = var.AgentImageSku
+	AgentStorageAccountName = var.AgentStorageAccountName
 	AgentStorageBlobName = var.AgentStorageBlobName
-	AgentStorageBlobSourceUri = var.AgentStorageBlobSourceUri
+	AgentStorageBlobSourceUri = "https://${local.AgentStorageAccountName}.blob.core.windows.net/${local.AgentStorageContainerName}/${local.AgentStorageBlobName}"
+	StorageContainerName = var.AgentStorageContainerName
 	AppImageName = trimsuffix(local.AppStorageBlobName, ".vhd")
 	AppImageSku = var.AppImageSku
 	AppStorageBlobName = var.AppStorageBlobName
-	AppStorageBlobSourceUri = var.AppStorageBlobSourceUri
+	AppStorageBlobSourceUri = "https://${local.AppStorageAccountName}.blob.core.windows.net/${localAppStorageContainerName}/${local.AppStorageBlobName}"
+	AppStorageContainerName = var.AppStorageContainerName
 	ImagePublisherId = var.ImagePublisherId
 	ImageOfferId = var.ImageOfferId
 	ImageVersion = var.ImageVersion
@@ -16,9 +19,7 @@ locals {
 	ResourceGroupLocation = var.ResourceGroupLocation
 	ResourceGroupName = var.ResourceGroupName
 	SharedImageGalleryName = var.SharedImageGalleryName == null ? "${local.Preamble}-shared-image-gallery" : var.SharedImageGalleryName
-	StorageAccountName = var.StorageAccountName
 	StorageBlobType = var.StorageBlobType
-	StorageContainerName = var.StorageContainerName
 	Tag = var.Tag
 	UserEmailTag = var.UserEmailTag
 	UserLoginTag = var.UserLoginTag
