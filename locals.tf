@@ -8,7 +8,7 @@ locals {
 	AppImageName = trimsuffix(local.AppStorageBlobName, ".vhd")
 	AppImageSku = var.AppImageSku
 	AppStorageBlobName = var.AppStorageBlobName
-	AppStorageBlobSourceUri = "https://${local.AppStorageAccountName}.blob.core.windows.net/${localAppStorageContainerName}/${local.AppStorageBlobName}"
+	AppStorageBlobSourceUri = "https://${local.AppStorageAccountName}.blob.core.windows.net/${local.AppStorageContainerName}/${local.AppStorageBlobName}"
 	AppStorageContainerName = var.AppStorageContainerName
 	ImagePublisherId = var.ImagePublisherId
 	ImageOfferId = var.ImageOfferId
