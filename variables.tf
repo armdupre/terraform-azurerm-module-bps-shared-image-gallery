@@ -5,13 +5,13 @@ variable "AgentImageSku" {
 }
 
 variable "AgentStorageAccountName" {
-	default = "bpsve1000"
+	default = "bpsve1000p1"
 	description = "Id of Agent storage account that must be unique across Azure"
 	type = string
 }
 
 variable "AgentStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.0_KVM.vhd"
+	default = "Ixia_BreakingPoint_Virtual_Blade_10.00.0_MsAzure.vhd"
 	description = "Id of Agent entity comprised of binary data, properties, and metadata"
 	type = string
 }
@@ -35,7 +35,7 @@ variable "AppStorageAccountName" {
 }
 
 variable "AppStorageBlobName" {
-	default = "Ixia_BreakingPoint_Virtual_Controller_10.00.0.vhd"
+	default = "Ixia_BreakingPoint_Virtual_Controller_10.00.0_MsAzure.vhd"
 	description = "Id of App entity comprised of binary data, properties, and metadata"
 	type = string
 }
@@ -59,7 +59,7 @@ variable "ImagePublisherId" {
 }
 
 variable "ImageVersion" {
-	default = "10.0.0"
+	default = "10.0.1"
 	description = "The version number of an image SKU."
 	type = string
 }
@@ -136,7 +136,7 @@ variable "UserProjectTag" {
 }
 
 variable "Version" {
-	default = "10.00"
+	default = "10.01"
 	description = "Versioning of the application using the deployment"
 	type = string
 }
