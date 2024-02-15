@@ -29,7 +29,7 @@ variable "AppImageSku" {
 }
 
 variable "AppStorageAccountName" {
-	default = "bpsve1000"
+	default = "bpsve1000p1"
 	description = "Id of App storage account that must be unique across Azure"
 	type = string
 }
